@@ -15,7 +15,7 @@
   <packaging>bundle</packaging>
 
   <properties>
-    <jetty.version>8.1.15.v20140411</jetty.version>
+    <jetty.version>9.4.14.v20181114</jetty.version>
   </properties>
 
   <dependencies>
@@ -90,8 +90,12 @@
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-websocket</artifactId>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.websocket</groupId>
+      <artifactId>websocket-servlet</artifactId>
       <version>${jetty.version}</version>
     </dependency>
 

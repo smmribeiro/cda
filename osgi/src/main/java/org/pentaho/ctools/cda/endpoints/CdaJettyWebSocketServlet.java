@@ -12,8 +12,9 @@
  */
 package org.pentaho.ctools.cda.endpoints;
 
-import org.eclipse.jetty.websocket.WebSocket;
-import org.eclipse.jetty.websocket.WebSocketServlet;
+import org.eclipse.jetty.websocket.api.annotations.WebSocket;
+import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
+import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import pt.webdetails.cda.push.WebsocketJsonQueryEndpoint;
 
 import javax.servlet.http.HttpServletRequest;
@@ -29,8 +30,7 @@ public class CdaJettyWebSocketServlet extends WebSocketServlet {
   }
 
   @Override
-  public boolean checkOrigin( HttpServletRequest request, String origin ) {
-    // TODO Cross-domain origin logic
-    return true;
+  public void configure( WebSocketServletFactory factory ) {
+    factory.register( CdaJettyWebSocketServlet.class );
   }
 }

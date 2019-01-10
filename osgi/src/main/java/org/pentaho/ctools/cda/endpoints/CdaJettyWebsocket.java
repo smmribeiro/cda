@@ -14,7 +14,7 @@ package org.pentaho.ctools.cda.endpoints;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.eclipse.jetty.websocket.WebSocket;
+import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 import pt.webdetails.cda.push.IWebsocketEndpoint;
 
 import javax.servlet.http.HttpServletRequest;
